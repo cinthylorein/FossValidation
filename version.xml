@@ -1,0 +1,22 @@
+<package name='FossValidation' version='0.0.1'>
+	<depends on='BEAST.base' atleast='2.7.0'/>
+	<depends on='BEAST.app' atleast='2.7.0'/>
+    	
+  <packageapp description="Create trace log of difference between the molecular fossil age (tree1) and observed fossil age (tree2) for all other fossil-dated nodes on the tree."
+              class="FossValidation.tools.CompareNodeAges"
+              args=""
+            />
+  <packageapp description="Create trace log of difference between the molecular fossil age (tree1) and observed fossil age (tree2) for all other fossil-dated nodes on the tree."
+              class="FossValidation.tools.DiscordantAgeCalibrationsLogger"
+              args=""
+            />
+
+  <packageapp description="Fossil validation"
+              class="FossValidation.tools.FossValidation"
+              args=""
+            />
+  <packageapp description="Fossil validation"
+              class="FossValidation.tools.LeaveOneOut"
+              args=""
+            />
+</package>
