@@ -16,18 +16,20 @@ Given two sets of tree posteriors:
 
 This tool computes the **average height difference** at internal calibration-dated nodes to assess agreement between the full and partial calibrations.
 
-### Method
+###  Method
 
-For each node \( t \) in the calibration set \( \mathcal{C} \), the method computes:
+For each node `t` in the set of calibrated nodes `C`, the tool computes:
 
-\[
-\delta(\mathcal{T}, \mathcal{R}) = \sum_{t \in \mathcal{C}} \mu(H_{\mathcal{T}_t}) - \mu(H_{\mathcal{R}_t})
-\]
+δ(T, R) = ∑ [ μ(H_T(t)) - μ(H_R(t)) ] for all t ∈ C
+
 
 Where:
-- \( \mathcal{T} \): Posterior tree set using a single calibration.
-- \( \mathcal{R} \): Reference tree set using all calibrations.
-- \( \mu(H) \): Mean height across the posterior samples of node \( t \).
+- `T`: Posterior tree set inferred using a single calibration.
+- `R`: Reference tree set inferred using all calibrations.
+- `μ(H)`: Mean node height across the posterior samples of node `t`.
+
+This provides a quantitative measure of how much a single calibration deviates from the consensus across all calibrations.
+
 
 The result is a log file with per-sample deviation values that can be visualized in **Tracer** or analyzed in **R**.
 
