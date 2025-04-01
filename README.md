@@ -8,7 +8,7 @@
 
 `CompareNodeAges` quantifies the consistency between two tree posterior distributions by comparing the calibrated node heights. This tool helps detect potentially misleading fossil calibrations by measuring how much node heights estimated under a single calibration deviate from those estimated using the full set of calibrations.
 
-### 🔍 Purpose
+### Purpose
 
 Given two sets of tree posteriors:
 - A **reference tree set** inferred using all calibration points.
@@ -16,7 +16,7 @@ Given two sets of tree posteriors:
 
 This tool computes the **average height difference** at internal calibration-dated nodes to assess agreement between the full and partial calibrations.
 
-### 🧪 Method
+### Method
 
 For each node \( t \) in the calibration set \( \mathcal{C} \), the method computes:
 
@@ -31,13 +31,13 @@ Where:
 
 The result is a log file with per-sample deviation values that can be visualized in **Tracer** or analyzed in **R**.
 
-### 📂 Inputs
+### Inputs
 
 - `tree1`: Maximum clade credibility tree file (NEXUS format).
 - `trees`: One or more target tree files with single calibrations.
 - `output`: Path to the output `.log` file (tab-separated).
 
-### ▶️ Example usage
+### Example usage
 
 To run `CompareNodeAges`, use the command line and specify:
 
